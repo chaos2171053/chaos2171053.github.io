@@ -1,21 +1,21 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
-import DarkModeToggler from "./DarkModeToggler"
-import ClientOnly from "./ClientOnly"
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import { css } from "@emotion/core";
+import { rhythm } from "../utils/typography";
+import DarkModeToggler from "./DarkModeToggler";
+import ClientOnly from "./ClientOnly";
 
 const isActive = propsIfActive => ({ isPartiallyCurrent, href, location }) => {
   if (isPartiallyCurrent) {
     if (href === "/" && location.pathname !== "/") {
-      return null
+      return null;
     }
 
-    return propsIfActive
+    return propsIfActive;
   }
 
-  return null
-}
+  return null;
+};
 
 const MenuLink = props => (
   <Link
@@ -44,7 +44,7 @@ const MenuLink = props => (
   >
     {props.children}
   </Link>
-)
+);
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -55,7 +55,7 @@ export default function Layout({ children }) {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div
@@ -121,9 +121,6 @@ export default function Layout({ children }) {
           >
             <MenuLink to="/">About Me</MenuLink>
             <MenuLink to="/blog/">Blog</MenuLink>
-            <MenuLink to="https://registry.jsonresume.org/ArnaudValensi">
-              Resume
-            </MenuLink>
             <MenuLink to="/contact/">Socials</MenuLink>
           </nav>
         </div>
@@ -150,5 +147,5 @@ export default function Layout({ children }) {
       </header>
       <div>{children}</div>
     </div>
-  )
+  );
 }

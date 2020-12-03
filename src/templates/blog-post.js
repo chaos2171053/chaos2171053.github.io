@@ -1,17 +1,17 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-import { rhythm } from "../utils/typography"
-import { css } from "@emotion/core"
-import Utterances from "../components/Utterances"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import { rhythm } from "../utils/typography";
+import { css } from "@emotion/core";
+import Utterances from "../components/Utterances";
 
 export default function BlogPost({ data, pageContext, location }) {
-  const { previousPost, nextPost } = pageContext
-  const post = data.markdownRemark
+  const { previousPost, nextPost } = pageContext;
+  const post = data.markdownRemark;
   const image = post.frontmatter.image
     ? post.frontmatter.image.childImageSharp.resize
-    : null
+    : null;
 
   return (
     <Layout>
@@ -39,20 +39,6 @@ export default function BlogPost({ data, pageContext, location }) {
           <h1>{post.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
-        <div
-          css={css`
-            margin-top: ${rhythm(1)};
-          `}
-        >
-          PS:{" "}
-          <span role="img" aria-label="Wizard">
-            🧙
-          </span>
-          <span role="img" aria-label="Scroll">
-            📜
-          </span>{" "}
-          I'm looking for a freelance mission. <Link to="/">See here.</Link>
-        </div>
       </main>
       <nav
         css={css`
@@ -90,7 +76,7 @@ export default function BlogPost({ data, pageContext, location }) {
         async={true}
       />
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
@@ -112,4 +98,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
