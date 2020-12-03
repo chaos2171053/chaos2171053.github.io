@@ -29,7 +29,7 @@ ignore_root = True
 
 
 def download_file(file_url, destination_folder):
-    r = requests.get(file_url, stream=True)
+    r = requests.get(file_url, stream=True,verify=False)
     # converts response headers mime type to an extension (may not work with everything)
     ext = r.headers['content-type'].split('/')[-1]
 
@@ -119,6 +119,7 @@ def to_markdown(page_id, ignore):
     if hasattr(page, 'cover') and page.cover:
         page_cover_url = 'https://www.notion.so' + page.cover
         cover_image_name = download_file(page_cover_url, dest_path)
+        print("cover_image_name :",cover_image_name)
         metas.append(f"featured: '{cover_image_name}'")
 
     text, child_metas = process_block(page)
