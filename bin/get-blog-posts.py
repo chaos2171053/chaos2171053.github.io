@@ -116,9 +116,8 @@ def to_markdown(page_id, ignore):
     metas.append(f"title: '{page_title}'")
 
     # Download the cover and add it to the frontmatter.
-    raw_page = page.get()
-    if 'format' in raw_page and 'page_cover' in raw_page['format']:
-        page_cover_url = raw_page['format']['page_cover']
+    if hasattr(page, 'cover') and page.cover:
+        page_cover_url = 'https://www.notion.so' + page.cover
         cover_image_name = download_file(page_cover_url, dest_path)
         metas.append(f"featured: '{cover_image_name}'")
 
