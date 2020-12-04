@@ -117,12 +117,10 @@ def to_markdown(page_id, ignore):
     metas.append(f"title: '{page_title}'")
 
     # Download the cover and add it to the frontmatter.
-    if hasattr(page, 'cover') and page.cover:
-        page_cover_url = 'https://www.notion.so' + page.cover
-        cover_image_name = download_file(page_cover_url, dest_path)
-        featured = random.random()
-        print("cover_image_name :", cover_image_name)
-        metas.append(f"featured: '{featured}'")
+    # if hasattr(page, 'cover') and page.cover:
+    #     page_cover_url = 'https://www.notion.so' + page.cover
+    #     cover_image_name = download_file(page_cover_url, dest_path)
+    #     metas.append(f"featured: '{cover_image_name}'")
 
     text, child_metas = process_block(page)
 
