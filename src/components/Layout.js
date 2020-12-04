@@ -1,21 +1,32 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
-import DarkModeToggler from "./DarkModeToggler"
-import ClientOnly from "./ClientOnly"
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import { css } from "@emotion/core";
+import { rhythm } from "../utils/typography";
+import DarkModeToggler from "./DarkModeToggler";
+import ClientOnly from "./ClientOnly";
 
 const isActive = propsIfActive => ({ isPartiallyCurrent, href, location }) => {
   if (isPartiallyCurrent) {
     if (href === "/" && location.pathname !== "/") {
-      return null
+<<<<<<< HEAD
+      return null;
     }
 
-    return propsIfActive
+    return propsIfActive;
   }
 
-  return null
-}
+  return null;
+};
+=======
+      return null;
+    }
+
+    return propsIfActive;
+  }
+
+  return null;
+};
+>>>>>>> develop
 
 const MenuLink = props => (
   <Link
@@ -44,7 +55,11 @@ const MenuLink = props => (
   >
     {props.children}
   </Link>
-)
+<<<<<<< HEAD
+);
+=======
+);
+>>>>>>> develop
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -55,7 +70,11 @@ export default function Layout({ children }) {
         }
       }
     }
-  `)
+<<<<<<< HEAD
+  `);
+=======
+  `);
+>>>>>>> develop
 
   return (
     <div
@@ -121,9 +140,12 @@ export default function Layout({ children }) {
           >
             <MenuLink to="/">About Me</MenuLink>
             <MenuLink to="/blog/">Blog</MenuLink>
+<<<<<<< HEAD
             <MenuLink to="https://registry.jsonresume.org/ArnaudValensi">
-              Resume
+            Resume
             </MenuLink>
+=======
+>>>>>>> develop
             <MenuLink to="/contact/">Socials</MenuLink>
           </nav>
         </div>
@@ -149,6 +171,10 @@ export default function Layout({ children }) {
         </div>
       </header>
       <div>{children}</div>
-    </div>
+    </div >
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> develop
 }

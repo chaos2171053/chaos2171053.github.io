@@ -1,13 +1,13 @@
-const path = require(`path`)
+const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
-    title: `Arnaud Valensi`,
-    description: `Arnaud Valensi's personal blog`,
-    author: `Arnaud Valensi`,
-    siteUrl: `https://arnaudvalensi.github.io`, // No trailing slash allowed.
+    title: `Chaos world`,
+    description: `chaos's personal blog`,
+    author: `chaos2171053`,
+    siteUrl: `https://chaos2171053.github.io`, // No trailing slash allowed.
     social: {
-      twitter: `ArnaudValensi`,
+      twitter: ``,
     },
   },
   plugins: [
@@ -84,4 +84,8 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
   ],
-}
+<<<<<<< HEAD
+};
+=======
+};
+>>>>>>> develop

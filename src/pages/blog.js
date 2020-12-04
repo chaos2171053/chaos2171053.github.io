@@ -1,16 +1,29 @@
-import React from "react"
-import Layout from "../components/Layout"
-import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
-import { Link, graphql } from "gatsby"
-import SEO from "../components/SEO"
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
+import { css } from "@emotion/core";
+import { rhythm } from "../utils/typography";
+import { Link, graphql } from "gatsby";
+import SEO from "../components/SEO";
+=======
+import React from "react";
+import Layout from "../components/Layout";
+import { css } from "@emotion/core";
+import { rhythm } from "../utils/typography";
+import { Link, graphql } from "gatsby";
+import SEO from "../components/SEO";
+>>>>>>> develop
 
 export default function Blog({ data, location }) {
   return (
     <Layout>
       <SEO
         title="Blog"
+<<<<<<< HEAD
         description="All the blog posts from Arnaud Valensi"
+=======
+        description="All the blog posts from Chaos"
+>>>>>>> develop
         pathname={location.pathname}
       />
       <main>
@@ -48,7 +61,7 @@ export default function Blog({ data, location }) {
         ))}
       </main>
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
@@ -71,4 +84,8 @@ export const query = graphql`
       }
     }
   }
-`
+<<<<<<< HEAD
+`;
+=======
+`;
+>>>>>>> develop

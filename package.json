@@ -1,7 +1,7 @@
 {
   "name": "arnaud-valensi-blog",
   "private": true,
-  "description": "Arnaud Valensi's blog",
+  "description": "chaos blog",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
