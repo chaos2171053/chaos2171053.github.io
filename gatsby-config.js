@@ -11,12 +11,6 @@ module.exports = {
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-178749604-1`,
-      },
-    },
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-emotion`,
     {
@@ -65,8 +59,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Arnaud Valensi`,
-        short_name: `Arnaud Valensi`,
+        name: `chaos2171053`,
+        short_name: `chaos`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
