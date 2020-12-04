@@ -8,7 +8,6 @@ import ClientOnly from "./ClientOnly";
 const isActive = propsIfActive => ({ isPartiallyCurrent, href, location }) => {
   if (isPartiallyCurrent) {
     if (href === "/" && location.pathname !== "/") {
-<<<<<<< HEAD
       return null;
     }
 
@@ -17,16 +16,6 @@ const isActive = propsIfActive => ({ isPartiallyCurrent, href, location }) => {
 
   return null;
 };
-=======
-      return null;
-    }
-
-    return propsIfActive;
-  }
-
-  return null;
-};
->>>>>>> develop
 
 const MenuLink = props => (
   <Link
@@ -55,11 +44,7 @@ const MenuLink = props => (
   >
     {props.children}
   </Link>
-<<<<<<< HEAD
 );
-=======
-);
->>>>>>> develop
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -70,11 +55,7 @@ export default function Layout({ children }) {
         }
       }
     }
-<<<<<<< HEAD
   `);
-=======
-  `);
->>>>>>> develop
 
   return (
     <div
@@ -140,12 +121,6 @@ export default function Layout({ children }) {
           >
             <MenuLink to="/">About Me</MenuLink>
             <MenuLink to="/blog/">Blog</MenuLink>
-<<<<<<< HEAD
-            <MenuLink to="https://registry.jsonresume.org/ArnaudValensi">
-            Resume
-            </MenuLink>
-=======
->>>>>>> develop
             <MenuLink to="/contact/">Socials</MenuLink>
           </nav>
         </div>
@@ -172,9 +147,5 @@ export default function Layout({ children }) {
       </header>
       <div>{children}</div>
     </div >
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> develop
 }
