@@ -8,11 +8,7 @@ export default function Contact({ location }) {
     <Layout>
       <SEO
         title="Social information"
-<<<<<<< HEAD
-        description="Arnaud Valensi's social networks details"
-=======
         description="Chaos's social networks details"
->>>>>>> develop
         pathname={location.pathname}
       />
       <main
@@ -22,11 +18,7 @@ export default function Contact({ location }) {
       >
         <p>
           <a
-<<<<<<< HEAD
-            href="mailto:arnaud.valensi@gmail.com"
-=======
             href="mailto:chaos2171053@gmail.com"
->>>>>>> develop
             target="_blank"
             rel="noreferrer"
           >
@@ -35,42 +27,14 @@ export default function Contact({ location }) {
         </p>
         <p>
           <a
-<<<<<<< HEAD
-            href="https://github.com/ArnaudValensi"
-=======
             href="https://github.com/chaos2171053"
->>>>>>> develop
             target="_blank"
             rel="noreferrer"
           >
             GitHub
           </a>
         </p>
-<<<<<<< HEAD
-      <p>
-        <a
-          href="https://www.linkedin.com/in/arnaud-valensi-04080084/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-          </a>
-      </p>
-      <p>
-        <a
-          href="https://twitter.com/ArnaudValensi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Twitter
-          </a>
-      </p>
-      </main>
-    </Layout >
-  )
-=======
       </main>
     </Layout>
   );
->>>>>>> develop
 }

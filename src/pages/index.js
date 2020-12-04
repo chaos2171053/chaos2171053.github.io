@@ -10,11 +10,7 @@ export default function Home({ data, location }) {
     <Layout>
       <SEO
         title="About Me"
-<<<<<<< HEAD
-        description="Arnaud Valensi's blog and portfolio"
-=======
         description="Chaos world"
->>>>>>> develop
         keywords={[`blog`, `portfolio`, `Arnaud Valensi`]}
         pathname={location.pathname}
       />
@@ -24,11 +20,7 @@ export default function Home({ data, location }) {
         </article>
       </main>
     </Layout>
-<<<<<<< HEAD
   );
-=======
-  );
->>>>>>> develop
 }
 
 export const query = graphql`
@@ -37,8 +29,4 @@ export const query = graphql`
       html
     }
   }
-<<<<<<< HEAD
 `;
-=======
-`;
->>>>>>> develop

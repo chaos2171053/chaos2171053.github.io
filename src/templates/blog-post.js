@@ -39,23 +39,6 @@ export default function BlogPost({ data, pageContext, location }) {
           <h1>{post.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
-<<<<<<< HEAD
-        <div
-          css={css`
-            margin-top: ${rhythm(1)};
-          `}
-        >
-        PS:{" "}
-          <span role="img" aria-label="Wizard">
-          🧙
-          </span>
-          <span role="img" aria-label="Scroll">
-          📜
-          </span>{" "}
-          I'm looking for a freelance mission. <Link to="/">See here.</Link>
-        </div>
-=======
->>>>>>> develop
       </main>
       <nav
         css={css`
@@ -73,7 +56,7 @@ export default function BlogPost({ data, pageContext, location }) {
               rel="prev"
               style={{ marginRight: 20 }}
             >
-            ← {previousPost.title}
+              ← {previousPost.title}
             </Link>
           )}
         </div>
@@ -93,11 +76,7 @@ export default function BlogPost({ data, pageContext, location }) {
         async={true}
       />
     </Layout >
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> develop
 }
 
 export const query = graphql`
@@ -119,8 +98,4 @@ export const query = graphql`
       }
     }
   }
-<<<<<<< HEAD
 `;
-=======
-`;
->>>>>>> develop
