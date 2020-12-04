@@ -146,6 +146,6 @@ export default function Layout({ children }) {
         </div>
       </header>
       <div>{children}</div>
-    </div>
+    </div >
   );
 }
