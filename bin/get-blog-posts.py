@@ -30,29 +30,32 @@ ignore_root = True
 
 
 def download_file(file_url, destination_folder):
-    r = requests.get(file_url, stream=True, verify=False)
-    # converts response headers mime type to an extension (may not work with everything)
-    ext = r.headers['content-type'].split('/')[-1]
+    if file_url:
+        r = requests.get(file_url, stream=True, verify=False)
+        # converts response headers mime type to an extension (may not work with everything)
+        ext = r.headers['content-type'].split('/')[-1]
 
-    tmp_file_name = f'tmp.{ext}'
-    tmp_file_path = os.path.join(destination_folder, tmp_file_name)
+        tmp_file_name = f'tmp.{ext}'
+        tmp_file_path = os.path.join(destination_folder, tmp_file_name)
 
-    print(f"-> Downloading {file_url}")
+        print(f"-> Downloading {file_url}")
 
-    h = hashlib.sha1()
-    # open the file to write as binary - replace 'wb' with 'w' for text files
-    with open(tmp_file_path, 'wb') as f:
-        # iterate on stream using 1KB packets
-        for chunk in r.iter_content(1024):
-            f.write(chunk)  # write the file
-            h.update(chunk)
+        h = hashlib.sha1()
+        # open the file to write as binary - replace 'wb' with 'w' for text files
+        with open(tmp_file_path, 'wb') as f:
+            # iterate on stream using 1KB packets
+            for chunk in r.iter_content(1024):
+                f.write(chunk)  # write the file
+                h.update(chunk)
 
-    final_file_name = f'{h.hexdigest()}.{ext}'
-    final_file_path = os.path.join(destination_folder, final_file_name)
+        final_file_name = f'{h.hexdigest()}.{ext}'
+        final_file_path = os.path.join(destination_folder, final_file_name)
 
-    os.rename(tmp_file_path, final_file_path)
+        os.rename(tmp_file_path, final_file_path)
 
-    return final_file_name
+        return final_file_name
+    else:
+        return ""
 
 
 def process_block(block, text_prefix=''):
